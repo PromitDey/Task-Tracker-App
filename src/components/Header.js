@@ -59,7 +59,7 @@ const Header = () => {
         <a href="https://github.com/PromitDey" target="_blank">
           <ListItemButton>GitHub Account</ListItemButton>
         </a>
-        <a href="https://github.com/PromitDey" target="_blank">
+        <a href="https://github.com/PromitDey/Task-Tracker-App" target="_blank">
           <ListItemButton>GitHub Repo</ListItemButton>
         </a>
       </List>
