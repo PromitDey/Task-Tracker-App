@@ -21,6 +21,7 @@ const TaskTrackerApp = () => {
   const deleteTask = (index) => {
     const compTask = tasks.filter((task, i) => i === index);
     //console.log(compTask);
+    //using spread operators for updating my completed tasks array
     setCompletedTask([...completedTask, ...compTask]);
 
     const updateTasks = tasks.filter((task, i) => i !== index);
@@ -44,7 +45,8 @@ const TaskTrackerApp = () => {
               alignContent: "center",
             }}
           >
-            <TaskForm addTask={addTask} />
+            {/* passing props */}
+            <TaskForm addTask={addTask} /> 
           </Grid>
           <Grid
             item

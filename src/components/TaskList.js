@@ -7,7 +7,9 @@ import {
   IconButton,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-const TaskList = ({ tasks, deleteTask }) => {
+
+
+const TaskList = ({ tasks, deleteTask }) => { //props destructuring on the fly
   return (
     <div className="flex justify-center items-center  flex-col">
       <p className="text-center text-3xl font-semibold ">Task List</p>

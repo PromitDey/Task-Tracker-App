@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import {
   Box,
   AppBar,
@@ -22,10 +21,12 @@ const Header = () => {
   const [themeMode, setThemeMode] = useState("light");
   const [isLogged, setIsLogged] = useState(false);
 
+  //side bar
   const toggleDrawer = (openStatus) => {
     isOpen(openStatus);
   };
 
+  //theme switch
   const toggleTheme = () => {
     setThemeMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
@@ -42,10 +43,12 @@ const Header = () => {
     },
   });
 
+  //login/logout handler
   const handleLog = () => {
     setIsLogged(!isLogged);
   };
 
+  //side bar contents
   const DrawerList = (
     <Box onClick={() => toggleDrawer(false)} className="bg-slate-400">
       <List>
@@ -74,12 +77,14 @@ const Header = () => {
             <IconButton className="mr-2" onClick={() => toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
+            {/* side bar */}
             <Drawer open={open} onClose={() => toggleDrawer(false)}>
               {DrawerList}
             </Drawer>
             <Typography sx={{ flexGrow: 1 }} className="font-semibold text-2xl">
               Cool Task Tracker
             </Typography>
+            {/* login/logout button */}
             <Button
               color="inherit"
               className="font-semibold text-xl"
@@ -87,6 +92,7 @@ const Header = () => {
             >
               {isLogged ? "Logout" : "Login"}
             </Button>
+            {/* switch theme button */}
             <Button color="inherit" onClick={toggleTheme}>
               {themeMode === "light" ? <LightModeIcon /> : <DarkModeIcon />}
             </Button>

@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { TextField, Button, Grid } from "@mui/material";
 
-const TaskForm = ({ addTask }) => {
+const TaskForm = ({ addTask }) => { //props destructuring on the fly
   const [taskName, setTaskName] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
 
@@ -14,6 +14,7 @@ const TaskForm = ({ addTask }) => {
     setTaskDescription("");
   };
 
+  //custom alerts
   const noti = () => {
     toast("Wow !! Task added");
   };

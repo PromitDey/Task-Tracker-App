@@ -6,7 +6,7 @@ import {
     Typography,
   } from "@mui/material";
 
-const CompletedTask = ({tasks}) => {
+const CompletedTask = ({tasks}) => { //props destructuring on the fly
   return (
     <div className="flex justify-center items-center h-screen flex-col">
       <p className="text-center text-3xl font-semibold ">Completed List</p>
